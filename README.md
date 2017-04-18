@@ -1,7 +1,10 @@
-# test coverage for  [n_ (v1.4.4)](https://github.com/borisdiakur/n_#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-n_.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-n_) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-n_.svg)](https://travis-ci.org/npmtest/node-npmtest-n_)
+# npmtest-n_
+
+#### test coverage for  [n_ (v1.4.4)](https://github.com/borisdiakur/n_#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-n_.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-n_) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-n_.svg)](https://travis-ci.org/npmtest/node-npmtest-n_)
+
 #### lodash REPL
 
-[![NPM](https://nodei.co/npm/n_.png?downloads=true)](https://www.npmjs.com/package/n_)
+[![NPM](https://nodei.co/npm/n_.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/n_)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-n_/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-n_/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-n_/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-n_/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-n_/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-n_/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-n_/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-n_/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-n_/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-n_/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-n_%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-n_/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-n_/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-n_/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-n_/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-n_%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-n_/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-n_/build/test-report.html](https://npmtest.github.io/node-npmtest-n_/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-n_/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-n_/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-n_/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-n_/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-n_/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-n_/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-n_/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Boris Diakur",
-        "email": "contact@borisdiakur.com",
         "url": "https://github.com/borisdiakur"
     },
     "bin": {
@@ -41,12 +49,10 @@
     "contributors": [
         {
             "name": "Boris Diakur",
-            "email": "contact@borisdiakur.com",
             "url": "https://github.com/borisdiakur"
         },
         {
             "name": "John-David Dalton",
-            "email": "john.david.dalton@gmail.com",
             "url": "http://allyoucanleet.com/"
         }
     ],
@@ -88,17 +94,14 @@
     "main": "./lib/n_",
     "maintainers": [
         {
-            "name": "borisdiakur",
-            "email": "contact@borisdiakur.com"
+            "name": "borisdiakur"
         },
         {
-            "name": "jdalton",
-            "email": "john.david.dalton@gmail.com"
+            "name": "jdalton"
         }
     ],
     "name": "n_",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/borisdiakur/n_.git"
