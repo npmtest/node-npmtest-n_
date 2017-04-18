@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-n_/n_/lib/n_.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-n_/node_modules/n_/lib/n_.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-n_">npmtest-n_ (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-n_/n_/lib/n_.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-n_/node_modules/n_/lib/n_.js</span></h1>
     <h2>
         
         Statements: <span class="metric">61.29% <small>(19 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">2 statements, 2 branches</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-n_/n_/lib/</a> » n_.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-n_/node_modules/n_/lib/</a> &#187; n_.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -394,7 +396,7 @@ var repl = require('repl'),
     server = repl.start({
         prompt: 'n_ &gt; ',
         // allow strict mode via environment variable
-        replMode: (process.env.NODE_REPL_MODE === 'strict' || process.argv.indexOf('--use_strict') !== -1) ? <span class="branch-0 cbranch-no" title="branch not covered">repl.REPL_MODE_STRICT </span>: repl.REPL_MODE_MAGIC
+        replMode: (process.env.NODE_REPL_MODE === 'strict' || process.argv.indexOf('--use_strict') !== -1) ? <span class="branch-0 cbranch-no" title="branch not covered" >repl.REPL_MODE_STRICT </span>: repl.REPL_MODE_MAGIC
     });
 &nbsp;
 // save repl history
@@ -403,7 +405,7 @@ replHistory(server, path.join(osHomedir(), '.n_repl_history'));
 // create new pristine `lodash` instance
 var _ = require(process.env.N_LODASH_REQUIRE_PATH || 'lodash').runInContext(server.context);
 &nbsp;
-var lodashToInject = process.argv.indexOf('--fp') === -1 ? _ : <span class="branch-1 cbranch-no" title="branch not covered">require(path.join((process.env.N_LODASH_REQUIRE_PATH || 'lodash'), 'fp')).runInContext(server.context);</span>
+var lodashToInject = process.argv.indexOf('--fp') === -1 ? _ : <span class="branch-1 cbranch-no" title="branch not covered" >require(path.join((process.env.N_LODASH_REQUIRE_PATH || 'lodash'), 'fp')).runInContext(server.context);</span>
 &nbsp;
 // state vars
 var prevVal = lodashToInject,
@@ -413,20 +415,20 @@ var prevVal = lodashToInject,
 setDescriptor(server.context, '_', {
     'configurable': true,
     'enumerable': false,
-    'get': <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">        return currVal;</span>
+    'get': <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return currVal;</span>
     },
-    'set': <span class="fstat-no" title="function not covered">function (val) {</span>
-<span class="cstat-no" title="statement not covered">        prevVal = currVal;</span>
-<span class="cstat-no" title="statement not covered">        currVal = val;</span>
+    'set': <span class="fstat-no" title="function not covered" >function (val) {</span>
+<span class="cstat-no" title="statement not covered" >        prevVal = currVal;</span>
+<span class="cstat-no" title="statement not covered" >        currVal = val;</span>
     }
 });
 &nbsp;
 var useRedirect = parseInt(process.version.split('.')[0].split('v')[1]) &lt; 6; // node &lt; 6.x
-<span class="fstat-no" title="function not covered">function redirect(context) {</span>
+<span class="fstat-no" title="function not covered" >function redirect(context) {</span>
     /* istanbul ignore next */ // we do cover this - see .travis.yml
-<span class="cstat-skip" title="statement not covered">    if (useRedirect) {</span>
-<span class="cstat-skip" title="statement not covered">        context[specialVar] = context._;</span>
+<span class="cstat-skip" title="statement not covered" >    if (useRedirect) {</span>
+<span class="cstat-skip" title="statement not covered" >        context[specialVar] = context._;</span>
     }
 }
 &nbsp;
@@ -436,34 +438,33 @@ _.each(repl._builtinLibs, function (name) {
         descriptor = getDescriptor(context, name);
 &nbsp;
     setDescriptor(context, name, _.assign(descriptor, {
-        'get': _.wrap(descriptor.get, <span class="fstat-no" title="function not covered">function (get) {</span>
-<span class="cstat-no" title="statement not covered">            var context = server.context,</span>
+        'get': _.wrap(descriptor.get, <span class="fstat-no" title="function not covered" >function (get) {</span>
+<span class="cstat-no" title="statement not covered" >            var context = server.context,</span>
                 result = get();
 &nbsp;
-<span class="cstat-no" title="statement not covered">            redirect(context);</span>
-<span class="cstat-no" title="statement not covered">            currVal = prevVal;</span>
-<span class="cstat-no" title="statement not covered">            return result;</span>
+<span class="cstat-no" title="statement not covered" >            redirect(context);</span>
+<span class="cstat-no" title="statement not covered" >            currVal = prevVal;</span>
+<span class="cstat-no" title="statement not covered" >            return result;</span>
         })
     }));
 });
 &nbsp;
 var events = server.rli._events;
-events.line = _.wrap(events.line, <span class="fstat-no" title="function not covered">function (line, cmd) {</span>
-<span class="cstat-no" title="statement not covered">    var context = server.context;</span>
-<span class="cstat-no" title="statement not covered">    line[0](cmd); </span>// actual command execution
-<span class="cstat-no" title="statement not covered">    line[1](cmd); </span>// history persistance
-<span class="cstat-no" title="statement not covered">    redirect(context);</span>
-<span class="cstat-no" title="statement not covered">    currVal = prevVal;</span>
+events.line = _.wrap(events.line, <span class="fstat-no" title="function not covered" >function (line, cmd) {</span>
+<span class="cstat-no" title="statement not covered" >    var context = server.context;</span>
+<span class="cstat-no" title="statement not covered" >    line[0](cmd); </span>// actual command execution
+<span class="cstat-no" title="statement not covered" >    line[1](cmd); </span>// history persistance
+<span class="cstat-no" title="statement not covered" >    redirect(context);</span>
+<span class="cstat-no" title="statement not covered" >    currVal = prevVal;</span>
 });
 &nbsp;
 module.exports = server;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:54:52 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 20:26:38 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
